@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activityPrincip"
+    android:background="@android:color/background_dark"
+    tools:context=".Main2Activity">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banerID"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/llBase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvInstrucciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0"
+
+                android:paddingLeft="16dp"
+                android:text="Repite la palabra"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="visible">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+                <TextView
+                    android:id="@+id/tvPregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:onClick="onClickTexToSpeach"
+                    android:text="ANSWER"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btTalk1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/mycolor2"
+                    android:onClick="onClickTexToSpeach"
+                    app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <EditText
+                    android:id="@+id/tvRespuesta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:ems="10"
+                    android:hint="Respuesta"
+                    android:inputType="textPersonName"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_light_background"
+                    android:textColorHint="@color/cardview_light_background"
+                    android:theme="@style/TextviewStyle"
+                    android:verticalScrollbarPosition="defaultPosition" />
+
+                <ImageButton
+                    android:id="@+id/btMicrof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/mycolor2"
+                    android:onClick="iniciarEntrada"
+                    app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0"
+                    android:background="@color/mycolor3"
+                    android:onClick="onClickMostrarRespuestas"
+                    android:text="VER MAs" />
+
+                <Button
+                    android:id="@+id/btAnt"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@color/mycolor3"
+                    android:onClick="onClickAnt"
+                    android:text="@string/ant" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/mycolor3"
+                    android:onClick="onClickCambiar"
+                    android:padding="0dp"
+                    android:text="@string/sig" />
+
+
+                <Button
+                    android:id="@+id/btEnviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0"
+                    android:background="@color/mycolor3"
+                    android:onClick="send"
+                    android:text="SEND"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llDescripcion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mycolor3"
+            android:onClick="cerrar"
+            android:text="SALTAR"
+            android:textColor="@color/cardview_light_background"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

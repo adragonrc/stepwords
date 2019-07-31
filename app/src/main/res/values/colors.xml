@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4B1E4B</color>
+    <color name="colorPrimaryDark">#00574b</color>
+    <color name="colorAccent">#d81b60</color>
+
+    <color name="primaryColor">#d50000</color>
+    <color name="primaryLightColor">#ff5131</color>
+    <color name="primaryDarkColor">#9b0000</color>
+    <color name="secondaryColor">#03a9f4</color>
+    <color name="secondaryLightColor">#67daff</color>
+    <color name="secondaryDarkColor">#007ac1</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
+    <color name="black">#202020</color>
+    <color name="white">#ffffff</color>
+    <color name="black_overlay">#C0070A</color>
+    <color name="mycolor1">#A5000000</color>
+    <color name="mycolor2">#1CFFFFFF</color>
+    <color name="mycolor3">#525352</color>
+    <color name="fond1">#FCF3F3</color>
+    <color name="btnir1">#220769</color>
+    <color name="fondobtPrueba">#323232</color>
+    <color name="fond2">#95221A1A</color>
+    <color name="cardview_light_background">#FFFFFFFF</color>
+    <color name="fondButton">#414141</color>
+
+
+</resources>

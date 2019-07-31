@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Texto y Audio"
+        android:key="categori1">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/pref_token_key"
+            android:entryValues="@array/pref_token_value"
+            android:key="config_token"
+            android:summary="seclecciona tokem"
+            android:title="Token" />
+        <ListPreference
+            android:title="Velocidad de reproduccion de audio"
+            android:key="config_audio"
+            android:summary="Ajusta la velocidad"
+            android:entries="@array/pref_velrep_aud_key"
+            android:entryValues="@array/pref_velrep_aud_value"
+            android:defaultValue="100"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Colores"
+        android:key="categori2">
+        <PreferenceScreen
+            android:title="Fondo de pantalla"
+            android:key="colores">
+            <com.midominio.myapplication.SeekbarPreferens
+                android:key="key_background_seekbar_rojo"
+                android:defaultValue="0" />
+            <com.midominio.myapplication.SeekbarPreferens
+                android:key="key_background_seekbar_verde"
+                android:defaultValue="0" />
+            <com.midominio.myapplication.SeekbarPreferens
+                android:key="key_background_seekbar_azul"
+                android:defaultValue="0" />
+        </PreferenceScreen>
+        <PreferenceScreen
+        android:title="Texto"
+        android:key="colores">
+        <com.midominio.myapplication.SeekbarPreferens
+            android:key="key_text_seekbar_rojo"
+            android:defaultValue="100" />
+        <com.midominio.myapplication.SeekbarPreferens
+            android:key="key_text_seekbar_verde"
+            android:defaultValue="100" />
+        <com.midominio.myapplication.SeekbarPreferens
+            android:key="key_text_seekbar_azul"
+            android:defaultValue="100" />
+    </PreferenceScreen>
+    </PreferenceCategory>
+<PreferenceCategory
+    android:title="Preferencia de tiempo"
+    android:key="categori3">
+    <ListPreference
+        android:defaultValue="2"
+        android:entries="@array/pref_time_key"
+        android:entryValues="@array/pref_time_value"
+        android:key="pref_time_change"
+        android:title="Tiempo de cambio" />
+    <ListPreference
+        android:defaultValue="2"
+        android:entries="@array/pref_time_toast_key"
+        android:entryValues="@array/pref_time_toast_value"
+        android:key="pref_time_change"
+        android:title="Tiempo de cambio de Toast" />
+
+</PreferenceCategory>
+
+</PreferenceScreen>

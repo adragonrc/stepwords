@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "285927326063",
+    "firebase_url": "https://steowords.firebaseio.com",
+    "project_id": "steowords",
+    "storage_bucket": "steowords.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285927326063:android:8d71f184b250db96",
+        "android_client_info": {
+          "package_name": "com.midominio.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285927326063-2ad3c522p0alh3rn1ogij74vtvetsnlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIFb5Q0hMKvYt4RhaTsXXiuziU4s4OXI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285927326063-2ad3c522p0alh3rn1ogij74vtvetsnlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7112272416908253~2673073333"
+    }
+  ],
+  "configuration_version": "1"
+}
