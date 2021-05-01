@@ -31,7 +31,7 @@ public class BlankFragment2 extends Fragment {
     private InterstitialAd interstitialAd;
     private SharedPreferences sp;
     private String posInitName = "posInit";
-
+    private int cont[];
 
     @Nullable
     @Override
@@ -41,6 +41,10 @@ public class BlankFragment2 extends Fragment {
         iniciarViews();
         iniciarPreferencias();
         iniciarVariables();
+        cont = new int[3];
+        for (int i = 0; i<cont.length; i++){
+            cont[i] =0;
+        }
         return view;
     }
 
@@ -130,29 +134,41 @@ public class BlankFragment2 extends Fragment {
     private Button.OnClickListener onClickListenerBtAdj = new Button.OnClickListener(){
         @Override
         public void onClick(View v) {
-            flags[0] = false;
-            flags[1] = false;
-            flags[2] = true;
-            cargarNuevoAnuncio();
+            if(cont[0] < 3) { cont[0] ++;
+            }else{
+                flags[0] = false;
+                flags[1] = false;
+                flags[2] = true;
+                cargarNuevoAnuncio();
+                cont[0] = 0;
+            }
         }
     };
 
     private Button.OnClickListener onClickListenerBtCV = new Button.OnClickListener(){
         @Override
         public void onClick(View v) {
-            flags[0] = false;
-            flags[1] = true;
-            flags[2] = false;
-            cargarNuevoAnuncio();
+            if(cont[1] < 3) { cont[1] ++;
+            }else {
+                flags[0] = false;
+                flags[1] = true;
+                flags[2] = false;
+                cargarNuevoAnuncio();
+                cont[1] = 0;
+            }
         }
     };
     private Button.OnClickListener onClickListenerBtIrV = new Button.OnClickListener(){
         @Override
         public void onClick(View v) {
-            flags[0] = true;
-            flags[1] = false;
-            flags[2] = false;
-            cargarNuevoAnuncio();
+            if(cont[2] < 3) { cont[2] ++;
+            }else {
+                flags[0] = true;
+                flags[1] = false;
+                flags[2] = false;
+                cargarNuevoAnuncio();
+                cont [2] = 0;
+            }
         }
     };
 

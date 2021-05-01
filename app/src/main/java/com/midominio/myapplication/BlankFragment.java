@@ -29,6 +29,7 @@ public class BlankFragment extends Fragment {
 
     private SharedPreferences sp;
     private InterstitialAd interstitialAd;
+    private int cont = 0;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,7 +50,11 @@ public class BlankFragment extends Fragment {
         btMostrarPub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showPub();
+                if(cont < 3){
+                    cont++;
+                }else {
+                    showPub(); cont = 0;
+                }
             }
         });
         return view;
